@@ -179,4 +179,4 @@ if __name__=="__main__":
     copy_to = ' '#没有抄送对象时用空表示
     print (recipients)
 
-    mail.send_emain( recipients,copy_to, theme, main_body, path)
+    #mail.send_emain( recipients,copy_to, theme, main_body, path)
