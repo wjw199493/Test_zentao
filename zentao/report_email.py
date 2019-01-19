@@ -4,14 +4,14 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import  make_header
 class Email():
-    def send(self,xx,receiver,copy_to,text_part):
+    def send(self,xx,receiver,copy_to,mail_title,text_part):
         sender = '17139061609@163.com'
         receiver = receiver
         copy_to =  copy_to
         smtpserver = 'smtp.163.com'
         username = '17139061609@163.com'
         password = '******'
-        mail_title = '主题：这是带附件的邮件'
+        mail_title = mail_title
 
         # 创建一个带附件的实例
         message = MIMEMultipart()
@@ -46,14 +46,12 @@ class Email():
             smtpObj.quit()
         except:
             print ('邮件发送失败')
-
-    #self = 'pass'
-    #send(self)
 if __name__ == '__main__':
-    xx = './登陆接口测试报告.html','./创建用户测试报告.html','./上海悠悠面试总结.rar','./测试.xls','./git 初步使用教程.doc','./night.jpg','./emain.py'
+    xx = './登陆接口测试报告.html'
     receiver = '1427464220@qq.com,2209309573@qq.com'
     #copy_to =  '2579188890@qq.com'
     copy_to = ''
-    #text_part = '测试同时发送大多人，携带不同格式附件'
+    mail_title = '主题：这是带附件的邮件'
+    text_part = '测试同时发送大多人，携带不同格式附件'
     email = Email()
-    email.send(xx,receiver,copy_to,text_part)
+    email.send(xx,receiver,copy_to,mail_title,text_part)
