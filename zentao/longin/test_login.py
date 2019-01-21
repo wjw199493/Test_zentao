@@ -1,7 +1,7 @@
 import unittest
 import HTMLTestReportCN
-from longin import Login
-from excel_cz import Excel_dx
+from longin.longin import Login
+from comm.excel_cz import Excel_dx
 import requests
 data = Excel_dx
 longAPI = Login

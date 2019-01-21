@@ -1,11 +1,11 @@
 import requests
 import unittest
 import HTMLTestReportCN
-from excel_cz import Excel_dx
-from longin import Login
-from new_user import New_user
-from emain import Email_new
-mail = Email_new
+from comm.excel_cz import Excel_dx
+from longin.longin import Login
+from nwe_user.new_user import New_user
+from comm.report_email import Email
+mail = Email
 Newuser = New_user
 longAPI = Login
 data_user = Excel_dx
@@ -279,10 +279,10 @@ if __name__ == "__main__":
     runner.run(suite)
     theme = '禅道新建用户接口测试报告'
     main_body = '测试详情请查看附件'
-    path = r'F:\untitled\我的坚果云\练习\zentao\创建用户测试报告.html'
+    path = [r'F:\untitled\我的坚果云\练习\zentao\创建用户测试报告.html']
     recipients = '17139061609@163.com'+';'+'2579188890@qq.com'#收件人，多个收件人时用；隔开
     #copy_to = '2209309573@qq.com'#抄送对象，多个抄送对象时用；隔开
     copy_to = ' '#没有抄送对象时用空表示
     print (recipients)
 
-    mail.send_emain( recipients,copy_to, theme, main_body, path)
+    mail.send(path,copy_to, recipients, copy_to, theme,main_body )

@@ -1,9 +1,9 @@
-from excel_cz import Excel_dx as data
+from  comm.excel_cz import Excel_dx as data
 import requests
 import time
 
 data =data()
-ss = eval(data.du(1,9))#读取参数并转换为字典
+ss = eval(data.du(1,9))#读取参数并转换为字典nn
 host = (data.du(1,2))
 
 

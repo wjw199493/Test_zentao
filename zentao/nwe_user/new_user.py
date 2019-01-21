@@ -1,7 +1,7 @@
 import requests
 import time
-from excel_cz import Excel_dx
-from longin import Login
+from comm.excel_cz import Excel_dx
+from longin.longin import Login
 longAPI = Login
 data_use = Excel_dx
 rs = requests.session()
