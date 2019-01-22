@@ -7,7 +7,7 @@ class Excel_dx():
 
     def du (self,h,l):
         #path = 'F:/untitled/我的坚果云/git/zentao/comm/case.xls'
-        path = 'case.xls'
+        path = './comm/case.xls'
         workbook = xlrd.open_workbook(path)
         data_sheet = workbook.sheets()[0]
         ss =data_sheet.cell_value(h,l)#将字符串转为字典
@@ -26,7 +26,7 @@ class Excel_dx():
     def xg(self,h,l,vale):
 
         #style = xlwt.XFStyle()
-        read_file = xlrd.open_workbook('case.xls', formatting_info=True)
+        read_file = xlrd.open_workbook('./comm/case.xls', formatting_info=True)
         # 参数注释：
         # file_path：文件路径，包含文件的全名称
         # formatting_info=True：保留Excel的原格式
@@ -45,7 +45,7 @@ class Excel_dx():
         # value：写入数据
 
         # 保存写入数据后的文件到原文件路径
-        write_data.save('case.xls')
+        write_data.save('./comm/case.xls')
 
 if __name__=="__main__":
     a = Excel_dx()
