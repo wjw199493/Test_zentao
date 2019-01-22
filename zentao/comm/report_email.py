@@ -10,7 +10,7 @@ class Email():
         copy_to =  copy_to
         smtpserver = 'smtp.163.com'
         username = '17139061609@163.com'
-        password = 'wjw17139061609'
+        password = '******'
         mail_title = mail_title
 
         # 创建一个带附件的实例
